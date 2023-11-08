@@ -41,7 +41,7 @@ def user(zk, dme_lock, machine_id):
             print("Invalid command. Please use 'view', 'post <text>', or 'exit.")
 
 if __name__ == '__main__':
-    zk = KazooClient(hosts='172.31.13.196:2181', timeout=15.0)
+    zk = KazooClient(hosts='172.31.5.177:2181', timeout=15.0)
     zk.start()
     dme_lock = DistributedLock(num_clients=3)
     machine_id = "Node2"  # Replace with a unique machine ID
